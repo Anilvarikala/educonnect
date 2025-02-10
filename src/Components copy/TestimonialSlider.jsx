@@ -114,7 +114,6 @@
 
 // export default TestimonialSlider;
 
-
 import React, { useState, useEffect } from "react";
 import "./TestimonialSlider.css"; // Custom CSS file
 
@@ -155,21 +154,29 @@ const TestimonialSlider = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
+      prevIndex === 3 ? 0 : prevIndex + 1
     );
   };
 
+  // const prevSlide = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? testimonials.length - 3 : prevIndex - 3
+  //   );
+  // };
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 3 : prevIndex - 3
+    setCurrentIndex(
+      (prevIndex) =>
+        prevIndex === 0 ? prevIndex + (2) : prevIndex - 1
+      // ? Math.max(testimonials.length - (ismed ? 1 : 3), 0)
+      // : Math.max(prevIndex - (ismed ? 1 : 3), 0)
     );
   };
-  const [ismed,setmed] = useState(false);
+  const [ismed, setmed] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 700);
-      if(window.innerWidth >= 700 && window.innerWidth <= 1230){
+      if (window.innerWidth >= 700 && window.innerWidth <= 1230) {
         setmed(true);
       }
     };
@@ -179,61 +186,59 @@ const TestimonialSlider = () => {
   }, [ismed]);
 
   return (
-  
     <div className="testimonial-section">
       <h2 className="testimonial-heading">What Our Users Say</h2>
       {isMobile ? (
         <>
-        <div className="testimonial-container">
-          <div className="testimonial-slider">
-            <div className="testimonial-card">
-              <h4 className="testimonial-name">
-                {testimonials[currentIndex].name}
-              </h4>
-              <p className="testimonial-role">
-                {testimonials[currentIndex].role}
-              </p>
-              <p className="testimonial-review">
-                {testimonials[currentIndex].review}
-              </p>
+          <div className="testimonial-container">
+            <div className="testimonial-slider">
+              <div className="testimonial-card">
+                <h4 className="testimonial-name">
+                  {testimonials[currentIndex].name}
+                </h4>
+                <p className="testimonial-role">
+                  {testimonials[currentIndex].role}
+                </p>
+                <p className="testimonial-review">
+                  {testimonials[currentIndex].review}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="slider-controls">
-        <button className="prev" onClick={prevSlide}>Prev</button>
-         <button  className="next" onClick={nextSlide}>Next</button> 
-        </div>
-        </>
-      //   {/* Navigation buttons */}
-      // {/* <div className="slider-controls">
-      //   <button className="prev" onClick={prevSlide}>
-      //     Prev
-      //   </button>
-      //   <button className="next" onClick={nextSlide}>
-      //     Next
-      //   </button>
-      // </div> */}
-      ) : (
-       
-         <div className="testimonial-container">
-          <div className="testimonial-slider">
-            {testimonials.slice(currentIndex, currentIndex + (ismed ? 1 : 3)).map((test) => (
-              <div className="testimonial-card" key={test.name}>
-                <h4 className="testimonial-name">{test.name}</h4>
-                <p className="testimonial-role">{test.role}</p>
-                <p className="testimonial-review">{test.review}</p>
-              </div>
-            ))}
+          <div className="slider-controls">
+            <button className="prev" onClick={prevSlide}>
+              Prev
+            </button>
+            <button className="next" onClick={nextSlide}>
+              Next
+            </button>
           </div>
-          
+        </>
+      ) : (
+        //   {/* Navigation buttons */}
+        // {/* <div className="slider-controls">
+        //   <button className="prev" onClick={prevSlide}>
+        //     Prev
+        //   </button>
+        //   <button className="next" onClick={nextSlide}>
+        //     Next
+        //   </button>
+        // </div> */}
+        <div className="testimonial-container">
+          <div className="testimonial-slider">
+            {testimonials
+              .slice(currentIndex, currentIndex + (ismed ? 1 : 3))
+              .map((test) => (
+                <div className="testimonial-card" key={test.name}>
+                  <h4 className="testimonial-name">{test.name}</h4>
+                  <p className="testimonial-role">{test.role}</p>
+                  <p className="testimonial-review">{test.review}</p>
+                </div>
+              ))}
+          </div>
         </div>
-          
-          
       )}
-
-      
     </div>
-    
   );
 };
 

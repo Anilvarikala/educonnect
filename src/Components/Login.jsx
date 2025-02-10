@@ -16,17 +16,39 @@ const Login = () => {
       navigate("/");
     }
   }, []);
+  // const handleLogin = async () => {
+  //   if (email === "" || password === "") {
+  //     return toast.error("All field are required!");
+  //   }
+  //   const users = await signInWithEmailAndPassword(auth, email, password);
+
+  //   localStorage.setItem("user", users.user.email);
+  //   toast.success("Successfully logged in!");
+  //   setTimeout(() => {
+  //     navigate("/");
+  //   }, [200]);
+  // };
   const handleLogin = async () => {
     if (email === "" || password === "") {
-      return toast.error("All field are required!");
+      return toast.error("All fields are required!");
     }
-    const users = await signInWithEmailAndPassword(auth, email, password);
 
-    localStorage.setItem("user", users.user.email);
-    toast.success("Successfully logged in!");
-    setTimeout(() => {
-      navigate("/");
-    }, [200]);
+    try {
+      const users = await signInWithEmailAndPassword(auth, email, password);
+      localStorage.setItem("user", users.user.email);
+      // alert("Successfully logged in!");
+      setTimeout(() => {
+        navigate("/");
+      }, 200);
+    } catch (error) {
+      if (error.code === "auth/user-not-found") {
+        alert("You are not signed up. Please create an account.");
+      } else if (error.code === "auth/wrong-password") {
+        alert("Incorrect password. Please try again.");
+      } else {
+        alert("Login failed. Please check your credentials.");
+      }
+    }
   };
 
   return (
