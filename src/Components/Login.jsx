@@ -12,30 +12,23 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (localStorage.getItem('user')) {
+    if (localStorage.getItem("user")) {
       navigate("/");
     }
-  },[]);
+  }, []);
   const handleLogin = async () => {
-    if(email === "" || password === "")
-    {
-      return toast.error("All field are required!")
-    } 
-    const users = await signInWithEmailAndPassword(auth, email, password)
-  //  .then((res)=>{
- 
-  //  })
-  //  .catch(err => {
-  //    alert("Invalid email or password!")
-  //  })
-
+    if (email === "" || password === "") {
+      return toast.error("All field are required!");
+    }
+    const users = await signInWithEmailAndPassword(auth, email, password);
     localStorage.setItem("user", users.user.email);
-
     toast.success("Successfully logged in!");
     setTimeout(() => {
       navigate("/");
     }, [200]);
   };
+
+
 
   return (
     <div className="login-container">
@@ -50,7 +43,7 @@ const Login = () => {
           className="input-field"
         />
         <input
-        required
+          required
           type="password"
           placeholder="Password"
           value={password}
