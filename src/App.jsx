@@ -127,7 +127,7 @@ const App1 = () => {
           }
           
         />
-        <Route path="/*" element={<NewHome/>}></Route>
+        <Route path="*" element={<NewHome/>}></Route>
       </Routes>
       {/* <ToastContainer/> */}
     </>
