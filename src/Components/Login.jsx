@@ -21,14 +21,13 @@ const Login = () => {
       return toast.error("All field are required!");
     }
     const users = await signInWithEmailAndPassword(auth, email, password);
+
     localStorage.setItem("user", users.user.email);
     toast.success("Successfully logged in!");
     setTimeout(() => {
       navigate("/");
     }, [200]);
   };
-
-
 
   return (
     <div className="login-container">
