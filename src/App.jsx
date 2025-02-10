@@ -77,9 +77,8 @@ const App1 = () => {
         <Route
           path="/"
           element={
-            <ProtectedRoute>
-              <NewHome />{" "}
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            <NewHome />
           }
         />
 
@@ -98,17 +97,16 @@ const App1 = () => {
         <Route
           path="/Signup"
           element={
-            <ProtectedRoute>
-              <SignupPage />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            <SignupPage />
           }
         />
         <Route
           path="/Login"
           element={
-            <ProtectedRoute>
-              <Login />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            <Login />
+            // </ProtectedRoute>
           }
         />
 
@@ -123,13 +121,11 @@ const App1 = () => {
         <Route
           path="/admin"
           element={
-           
-              <AdminDashboard />
-           
+            <AdminDashboard />
+
             // a
           }
         />
-
       </Routes>
       {/* <ToastContainer/> */}
     </>
