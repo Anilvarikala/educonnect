@@ -18,6 +18,7 @@ const NewHome = ({ field, setfield }) => {
         setIsMobile(window.innerWidth <= 780);
         
       };
+      if(!localStorage.getItem('user')) nav("/Login")
 
       handleResize();
       // if(!localStorage.getItem("users")){

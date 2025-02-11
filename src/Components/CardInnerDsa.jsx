@@ -5,12 +5,12 @@ import MapCardDsa from "./MapCardDsa";
 const CardInnerDsa = () => {
   const Info = [
     {
-      name: "Dsa with Java",
+      name: "Dsa with c++",
       Fundamentals:
         "https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz",
     },
     {
-      name: "Dsa with c++",
+      name: "Dsa with Java",
       Fundamentals:
         "https://www.youtube.com/watch?v=Nckx9qMy_kw&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=2",
     },

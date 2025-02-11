@@ -39,6 +39,7 @@ import AdminDashboard from "./Components/Admin/AdminDashboard";
 import ProtectedAdminRoute from "./Components/ProtectedAdminRoute";
 import ProtectedAuthRoute from "./Components/ProtectedAuthRoute";
 import { ToastContainer } from "react-toastify";
+
 const App1 = () => {
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -56,10 +57,10 @@ const App1 = () => {
     return () => unsubscribe();
   }, [auth]);
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("user")) navigate("/");
-  //   else navigate("/")
-  // }, []);
+  useEffect(() => {
+    if (!localStorage.getItem("user")) navigate("/Login");
+    // else navigate("/")
+  }, []);
 
   //   // Clean up the subscription
   // }, []);
@@ -77,7 +78,7 @@ const App1 = () => {
         <Route
           path="/"
           element={
-            // <ProtectedRoute>
+          //  <welcomeHome/>
             <NewHome />
           }
         />
@@ -145,7 +146,7 @@ export const ProtectedRoutesForAdmin = ({ children }) => {
 };
 
 export const ProtectedRoutes = ({ children }) => {
-  if (localStorage.getItem("user")) {
+  if (localStorage.getItem('user')) {
     return children;
   } else {
     return <Navigate to="/Login" />;
