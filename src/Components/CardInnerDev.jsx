@@ -8,12 +8,12 @@ const CardInnerDev = () => {
       name: "Html",
       Basic:
         "https://www.youtube.com/watch?v=HcOc7P5BMi4",
-      Advance: "https://www.youtube.com/watch?v=HcOc7P5BMi4",
+      Advance: "https://www.youtube.com/watch?v=rklidcZ-aLUhttps://www.youtube.com/watch?v=rklidcZ-aLU",
     },
     {
       name: "Css",
       Basic: "https://www.youtube.com/watch?v=ESnrn1kAD4E",
-      Advnace: "https://www.youtube.com/watch?v=Edsxf_NBFrw&t=501s",
+      Advance: "https://www.youtube.com/watch?v=Edsxf_NBFrw&t=501s",
     },
     {
       name: "Tailwind Css",
