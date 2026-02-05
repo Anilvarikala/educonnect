@@ -4,31 +4,25 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
- 
-  margin-left: 32vw; /* Ensure no margin at the top */
-  position: relative; /* Ensures positioning of the container within the viewport */
+  margin-left: 32vw;
+  position: relative;
 }
 
-/* Center the signup box with some padding and rounded corners */
 .signup-box {
-  background-color: #ffffff;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
   text-align: center;
-  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  box-sizing: border-box; 
 }
-/* Custom styling for success and error toasts */
 .Toastify__toast--success {
-  background-color: #4caf50; /* Green for success */
+  background-color: #4caf50; 
 }
 
-.Toastify__toast--error {
-  
+.Toastify__toast--error{
   background-color: #f44336; 
-  color:#fff/* Red for error */
+  color:#fff
 }
 
 
