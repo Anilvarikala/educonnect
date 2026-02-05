@@ -10,7 +10,7 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
+<!-- 
   <!-- Add more URLs for other pages of your site -->
   <url>
     <loc>https://educonnect2006.vercel.app/about</loc> <!-- Add URLs for other pages -->
@@ -24,15 +24,7 @@
     <lastmod>2026-02-05T14:14:52.324Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+  </url> -->
 
-  <!-- Example of an image URL in the sitemap (optional) -->
-  <url>
-    <loc>https://educonnect2006.vercel.app/</loc>
-    <image:image>
-      <image:loc>https://educonnect2006.vercel.app/images/logo.png</image:loc> <!-- Example image -->
-      <image:caption>Logo of EduConnect</image:caption>
-    </image:image>
-  </url>
 
 </urlset>
