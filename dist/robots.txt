@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: http://localhost/sitemap.xml
+Sitemap: https://educonnect2006.vercel.app/sitemap.xml
