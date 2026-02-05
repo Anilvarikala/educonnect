@@ -5,7 +5,7 @@
 
   <!-- Example of a single URL in the sitemap -->
   <url>
-    <loc>https://educonnect2006.vercel.app/</loc> <!-- Use your actual live URL -->
+    <loc>https://educonnect2006.vercel.app</loc> <!-- Use your actual live URL -->
     <lastmod>2026-02-05T14:14:52.324Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
