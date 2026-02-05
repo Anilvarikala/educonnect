@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"><url><loc>http://localhost/</loc><lastmod>2026-02-05T14:14:52.324Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Example of a single URL in the sitemap -->
+  <url>
+    <loc>https://educonnect2006.vercel.app/</loc> <!-- Use your actual live URL -->
+    <lastmod>2026-02-05T14:14:52.324Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Add more URLs for other pages of your site -->
+  <url>
+    <loc>https://educonnect2006.vercel.app/about</loc> <!-- Add URLs for other pages -->
+    <lastmod>2026-02-05T14:14:52.324Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://educonnect2006.vercel.app/contact</loc> <!-- Add URLs for other pages -->
+    <lastmod>2026-02-05T14:14:52.324Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Example of an image URL in the sitemap (optional) -->
+  <url>
+    <loc>https://educonnect2006.vercel.app/</loc>
+    <image:image>
+      <image:loc>https://educonnect2006.vercel.app/images/logo.png</image:loc> <!-- Example image -->
+      <image:caption>Logo of EduConnect</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
